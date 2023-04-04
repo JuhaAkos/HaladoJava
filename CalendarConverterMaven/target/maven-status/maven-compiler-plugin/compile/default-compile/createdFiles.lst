@@ -1,0 +1,8 @@
+hu\me\java\input\CsvReader.class
+hu\me\java\model\Calendar.class
+hu\me\java\CalendarEngine.class
+hu\me\java\CalendarEngineImpl.class
+hu\me\java\output\Printer.class
+hu\me\java\model\Job.class
+hu\me\java\JobConverter.class
+hu\me\java\JobConverterImpl.class
