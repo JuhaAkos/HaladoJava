@@ -17,9 +17,10 @@ public class SellerImplTest {
 		String type = "SUV";
 		
 		StorageConsumer storage = mock(StorageConsumer.class);
+		String queryString = "colour " + colour + ", type " +type;
 		
 		
-		when(storage.find(colour, type)).thenReturn(null);
+		when(storage.find(queryString)).thenReturn(null);
 		Seller seller = new SellerImpl(storage);		
 		//WHEN
 		Car foundCar = seller.request(colour,  type);
@@ -36,9 +37,10 @@ public class SellerImplTest {
 			String foundCarId = "124";
 			
 			StorageConsumer storage = mock(StorageConsumer.class);
+			String queryString = "colour " + colour + ", type " +type;
 			
 			
-			when(storage.find(colour, type)).thenReturn(foundCarId);
+			when(storage.find(queryString)).thenReturn(foundCarId);
 			Car car = new Car("asdasd", "typeasdasd", "colourasdasd", "brandasd");
 			when(storage.get(foundCarId)).thenReturn(car);
 			Seller seller = new SellerImpl(storage);	
@@ -48,7 +50,7 @@ public class SellerImplTest {
 			
 			//THEN
 			assertSame(car, foundCar);
-			verify(storage, times(1)).find(colour, type);
+			verify(storage, times(1)).find(queryString);
 			verify(storage, times(1)).get(foundCarId);
 	 }
 }

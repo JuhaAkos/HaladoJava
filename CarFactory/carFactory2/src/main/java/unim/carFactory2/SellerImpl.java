@@ -8,7 +8,8 @@ public class SellerImpl implements Seller {
 	}
 
 	public Car request(String colour, String type) {
-		String foundCarId = storage.find(colour, type);
+		String queryString = "colour " + colour + ", type " +type;
+		String foundCarId = storage.find(queryString);
 		
 		Car foundCar = null;
 		if (foundCarId != null) {
