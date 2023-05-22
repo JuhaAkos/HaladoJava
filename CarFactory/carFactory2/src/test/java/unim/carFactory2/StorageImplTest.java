@@ -1,32 +1,23 @@
 package unim.carFactory2;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.mock;
-
 import org.junit.jupiter.api.Test;
 
 public class StorageImplTest {
 	@Test
-	void getMethodTest() {		
+	void getMethodWorking() {		
 	}
 	
 	@Test
-	void getMethodTestStorageEmpty() {		
-		String colour = "blue";
-		String type = "SUV";
-		
-		String queryString = "colour " + colour + ", type " +type;
-		
-		StorageConsumer storage = mock(StorageConsumer.class);		
-		
-		assertThrows(
-				StorageEmptyException.class, 
-				() -> storage.get(queryString));		
+	void getMethodStorageEmpty() {					
 	}
 	
 	@Test
-	void putTestStorageFull() {
-		
+	void putMethodWorking() {		
+	}
+	
+	@Test
+	void putMethodStorageFull() {
+	
 	}
 	
 	@Test

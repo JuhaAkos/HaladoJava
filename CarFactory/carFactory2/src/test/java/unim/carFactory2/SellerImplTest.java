@@ -17,8 +17,7 @@ public class SellerImplTest {
 		String type = "SUV";
 		
 		StorageConsumer storage = mock(StorageConsumer.class);
-		String queryString = "colour " + colour + ", type " +type;
-		
+		String queryString = "colour " + colour + ", type " +type;		
 		
 		when(storage.find(queryString)).thenReturn(null);
 		Seller seller = new SellerImpl(storage);		
@@ -37,8 +36,7 @@ public class SellerImplTest {
 			String foundCarId = "124";
 			
 			StorageConsumer storage = mock(StorageConsumer.class);
-			String queryString = "colour " + colour + ", type " +type;
-			
+			String queryString = "colour " + colour + ", type " +type;			
 			
 			when(storage.find(queryString)).thenReturn(foundCarId);
 			Car car = new Car("asdasd", "typeasdasd", "colourasdasd", "brandasd");
